@@ -292,13 +292,53 @@ h2.sec a.sec-link:hover .chev { transform: translateX(3px); opacity: 1; }
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; text-align: center; color: var(--muted); font-size: .84rem; }
 
 /* ---------- RESPONSIVE ---------- */
+@media (max-width: 820px) {
+  .wrap { padding: 0 20px; }
+  .nav-inner { padding: 12px 20px; }
+}
+
+/* Tablets / large phones */
 @media (max-width: 680px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .profile-card { margin: 0 auto; order: -1; }
+  .wrap { padding: 0 18px; }
+
+  /* Nav: socials on top row, page links wrap onto their own row */
+  .nav-inner { padding: 11px 18px; gap: 10px 14px; }
+  .nav-links { gap: 15px; }
+  .nav-links a.page { font-size: .88rem; }
+  .socials { gap: 15px; margin-left: 0; }
+
+  /* Hero */
+  header.hero { padding: 34px 0 8px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 26px; }
+  .profile-card { order: -1; margin: 0 auto; width: 100%; max-width: 240px; }
   .profile-photo .monogram { font-size: 3.8rem; }
-  h1.name { font-size: 2.1rem; }
+  h1.name { font-size: 2.2rem; }
+  .tagline { font-size: .98rem; }
+  .hero-cta .btn { flex: 1 1 auto; justify-content: center; }
+
+  /* Sections */
+  section { padding: 40px 0 32px; }
+  h2.sec { font-size: 1.4rem; }
+  .sec-head { margin: 18px 0 18px; }
+  .page-header { padding: 30px 0 6px; }
+  .page-header h1 { font-size: 1.9rem; }
+
+  /* Cards & rows */
   .proj { grid-template-columns: 1fr; }
-  .news-row { grid-template-columns: 84px 1fr; gap: 12px; }
+  .news-row { grid-template-columns: 76px 1fr; gap: 12px; }
   .xp-item, .edu-item { grid-template-columns: 1fr; }
   .xp-date, .edu-date { text-align: left; }
+}
+
+/* Small phones */
+@media (max-width: 430px) {
+  .nav-inner { justify-content: center; row-gap: 8px; }
+  .socials { width: 100%; justify-content: center; gap: 18px; }
+  .nav-links { width: 100%; justify-content: center; gap: 13px; }
+  h1.name { font-size: 1.95rem; }
+  .name, .bio, .tagline, .location, .hero-cta { text-align: left; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; }
+  .news-row { grid-template-columns: 1fr; gap: 2px; }
+  .news-date { font-size: .8rem; opacity: .85; }
 }
