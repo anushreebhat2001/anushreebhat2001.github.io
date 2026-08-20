@@ -33,7 +33,7 @@
         </a>
       </div>
       <div class="nav-links">
-        <a class="page" href="index.html#about">about</a>
+        <a class="page" href="index.html">about</a>
         <a class="page" href="index.html#news">news</a>
         <a class="page active" href="projects.html">projects</a>
         <a class="page" href="index.html#experience">experience</a>
@@ -81,7 +81,8 @@
             A learned block-size scheduler for diffusion language models (LLaDA-8B, Dream-7B).
             <span>My contribution:</span> the oracle supervision pipeline - K=4 rollouts over
             candidate block sizes generating ~90K labeled decoding boundaries, with per-token NLL caching
-            that turns relabeling at any compute penalty λ into a zero-cost analytical argmax.
+            that turns relabeling at any compute penalty λ into a zero-cost analytical argmax; ran the
+            Pareto analysis to compare rollout supervision against the lighter heuristic.
           </div>
           <div class="tags"><span class="tag">Diffusion LLMs</span><span class="tag">Efficient Inference</span><span class="tag">PyTorch</span></div>
           <div class="links">
@@ -100,12 +101,13 @@
         </div>
         <div>
           <div class="proj-title">Pathology Foundation Model Benchmarking</div>
-          <div class="proj-meta">Razavian Lab, NYU · in progress</div>
+          <div class="proj-meta">Razavian Lab, NYU · Fall 2026 – Present</div>
           <div class="proj-desc">
             A benchmark harness for pathology foundation models: frozen encoder → cached per-tile embeddings
-            → ABMIL aggregator → classification head. Reproduced published UNI&nbsp;v1 + ABMIL results on
-            NSCLC subtyping (LUAD vs LUSC) at ~0.970 balanced accuracy and ~0.998 AUROC - within bootstrap
-            confidence intervals. Extending to UNI2-h and TCGA pan-cancer survival.
+            → ABMIL aggregator → classification head, with one slide manifest as the source of truth for
+            splits. Reproduced published UNI&nbsp;v1 + ABMIL results on NSCLC subtyping (LUAD vs LUSC) at
+            ~0.970 balanced accuracy and ~0.998 AUROC - within bootstrap confidence intervals. Extending
+            the harness to UNI2 and TCGA pan-cancer survival.
           </div>
           <div class="tags"><span class="tag">Medical ML</span><span class="tag">Foundation Models</span><span class="tag">MIL</span></div>
           <div class="links">
@@ -121,12 +123,13 @@
         </div>
         <div>
           <div class="proj-title">Visual Perception in Vision-Language Models</div>
-          <div class="proj-meta">Grace Lindsay Lab, NYU CDS · results pending</div>
+          <div class="proj-meta">Grace Lindsay Lab, NYU CDS · Jun 2026 – Present</div>
           <div class="proj-desc">
             Built a reference database of 60+ open-weight VLM families classified by vision–language fusion
-            architecture (MLP projector, resampler/Q-Former, cross-attention, deep/early fusion) to link
-            behavioral cueing effects to mechanism - surfacing a published architecture mislabel of InternVL.
-            Designing psychophysics-style detection experiments adapting Gabor-in-noise paradigms to VLMs.
+            architecture (MLP projector, resampler/Q-Former, cross-attention, deep fusion) to link
+            behavioral effects to mechanism. Designing psychophysics-style detection experiments adapting
+            Gabor-in-noise paradigms to VLMs, sweeping stimulus parameters to locate detection thresholds
+            and adding zero-contrast catch trials to separate detection from prompt compliance.
           </div>
           <div class="tags"><span class="tag">VLMs</span><span class="tag">Psychophysics</span><span class="tag">Interpretability</span></div>
           <div class="links">
@@ -135,26 +138,26 @@
         </div>
       </article>
 
-      <!-- P5 AI4CE egocentric (research) -->
+      <!-- AI4CE mCBCT bronchoscopy (research) -->
       <article class="proj" data-category="research">
-        <a class="thumb" href="https://github.com/anushreebhat2001" target="_blank" rel="noopener">
-          <div class="fallback" style="display:flex; background:linear-gradient(135deg,#6a8e5a,#3f6e2f)">Egocentric Vision &amp; 3D Geometry</div>
-        </a>
+        <div class="thumb">
+          <div class="fallback" style="display:flex; background:linear-gradient(135deg,#3f6e6a,#2f5d6e)">Perception-Guided mCBCT</div>
+        </div>
         <div>
-          <div class="proj-title">Egocentric Vision &amp; 3D Geometry Pipeline</div>
-          <div class="proj-meta">AI4CE Lab, NYU</div>
+          <div class="proj-title">Perception-Guided mCBCT for Robotic Bronchoscopy</div>
+          <div class="proj-meta">AI4CE Lab, NYU (with NYU Langone) · May 2026 – Present</div>
           <div class="proj-desc">
-            A real-world perception pipeline integrating Depth Anything V2 and ZoeDepth for metric-scale
-            monocular depth, reconstructing 3D scene interactions for robotic grasping. Applied Florence-2
-            and SAM 2 for zero-shot detection/segmentation with CoTracker point tracking to resolve occlusion
-            across 30+ object categories, curating a dataset from the Apple EgoDex corpus.
+            A two-lane perception system for mobile cone-beam CT (mCBCT) positioning in robotic
+            bronchoscopy. One lane fits SMPL body models to pre-op chest CT and live RGB-D human-mesh
+            regressors, registering them via ICP to transport a lung nodule's 3D position into the OR
+            frame (~4 mm error in CT-space validation). The other builds an OR digital twin from fixed
+            RGB-D cameras — metric 3D reconstruction plus continuous C-arm tracking (SAM video segmentation
+            + CAD registration) to localize the mCBCT isocenter and compute a real-time guidance vector to
+            the lesion.
           </div>
-          <div class="tags"><span class="tag">Computer Vision</span><span class="tag">Depth Estimation</span><span class="tag">SAM 2</span></div>
+          <div class="tags"><span class="tag">Medical Imaging</span><span class="tag">3D Perception</span><span class="tag">Robotics</span></div>
           <div class="links">
-            <a class="btn" href="https://github.com/anushreebhat2001" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
-              GitHub
-            </a>
+            <span class="btn disabled">Lab project · in progress</span>
           </div>
         </div>
       </article>

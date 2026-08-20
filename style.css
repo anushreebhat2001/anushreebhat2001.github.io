@@ -119,6 +119,19 @@ h1.name {
 .location { display: inline-flex; align-items: center; gap: 6px; color: color-mix(in srgb, var(--accent) 50%, var(--accent-2) 50%); font-size: .92rem; margin: 0 0 20px; }
 .location svg { width: 15px; height: 15px; }
 .bio p { margin: 0 0 14px; }
+.hero-cta { margin: 0 0 22px; display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-primary {
+  color: #fff; border-color: transparent;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+}
+.btn-primary:hover {
+  color: #fff; border-color: transparent;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  transform: translateY(-1px);
+}
+.btn-primary svg { width: 16px; height: 16px; }
+/* no glow on the hero CTA buttons */
+.hero-cta .btn, .hero-cta .btn:hover { box-shadow: none; }
 /* Profile card */
 .profile-card {
   width: 260px; background: var(--card); border: 1px solid var(--line);
