@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art - Anushree Bhat</title>
+  <meta name="description" content="Art, design, and photography by Anushree Bhat." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .art-intro { max-width: 640px; margin-bottom: 22px; }
+    .art-grid { columns: 3 240px; column-gap: 16px; margin-top: 10px; }
+    .art-item { break-inside: avoid; margin: 0 0 16px; }
+    .art-item img { width: 100%; border-radius: 10px; display: block; }
+    .art-item figcaption { font-size: 0.85rem; opacity: 0.7; margin-top: 6px; }
+    .art-empty { opacity: 0.7; font-style: italic; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="nav-inner">
+      <div class="socials">
+        <a href="mailto:anushreebhat2001@gmail.com" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+        <a href="https://github.com/anushreebhat2001" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/anushreebhat2001" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4V9Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/smudgy_perspective/" target="_blank" rel="noopener" title="Instagram (art)" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a class="page" href="https://anushreebhat2001.github.io/">about</a>
+        <a class="page" href="index.html#news">news</a>
+        <a class="page" href="projects.html">projects</a>
+        <a class="page" href="index.html#experience">experience</a>
+        <a class="page" href="index.html#education">education</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" title="Toggle light / dark" aria-label="Toggle light / dark">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.8 6.8 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header wrap">
+    <a class="back-link" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      back to home
+    </a>
+    <h1>art</h1>
+    <p class="sub">The other side of what I do - drawing, design, typography, and photography.</p>
+  </header>
+
+  <!-- ============ ART ============ -->
+  <main class="wrap" style="padding: 24px 24px 40px;">
+    <p class="art-intro">
+      When I'm not training models or studying how they see, I make things by hand - a habit that
+      quietly feeds the perception research. A rotating selection below; the full, messier feed lives
+      on Instagram.
+    </p>
+    <a class="btn btn-primary" href="https://www.instagram.com/smudgy_perspective/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      @smudgy_perspective
+    </a>
+
+    <div id="art-grid" class="art-grid"></div>
+    <p id="art-empty" class="art-empty" hidden>Selected pieces coming soon - for now, the full feed is on Instagram above.</p>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    © 2026 Anushree Bhat ·
+    <a href="mailto:anushreebhat2001@gmail.com">email</a> ·
+    <a href="https://github.com/anushreebhat2001" target="_blank" rel="noopener">github</a> ·
+    <a href="https://www.linkedin.com/in/anushreebhat2001" target="_blank" rel="noopener">linkedin</a> ·
+    <a href="https://www.kaggle.com/anushreebhat" target="_blank" rel="noopener">kaggle</a> ·
+    <a href="art.html">art</a>
+  </footer>
+
+  <!-- ============ GALLERY DATA ============ -->
+  <!--
+    To add pieces: drop image files into the art/ folder, then add one line each below.
+    Order here = order on the page. The caption (alt) is optional.
+      { src: "art/my-piece.jpg", alt: "Charcoal study, 2024" },
+  -->
+  <script>
+    var artworks = [
+      // { src: "art/piece-01.jpg", alt: "" },
+    ];
+    (function () {
+      var grid = document.getElementById('art-grid');
+      var empty = document.getElementById('art-empty');
+      if (!grid) return;
+      if (!artworks.length) { if (empty) empty.hidden = false; return; }
+      artworks.forEach(function (a) {
+        var fig = document.createElement('figure');
+        fig.className = 'art-item';
+        var img = document.createElement('img');
+        img.src = a.src;
+        img.alt = a.alt || '';
+        img.loading = 'lazy';
+        img.onerror = function () { fig.style.display = 'none'; };
+        fig.appendChild(img);
+        if (a.alt) {
+          var cap = document.createElement('figcaption');
+          cap.textContent = a.alt;
+          fig.appendChild(cap);
+        }
+        grid.appendChild(fig);
+      });
+    })();
+  </script>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
